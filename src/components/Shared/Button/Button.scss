@@ -1,0 +1,58 @@
+@import '../../../styles';
+
+@mixin button {
+  user-select: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 500;
+  padding: 0.8rem 2.2rem;
+  border: 3px solid transparent;
+  border-radius: 6px;
+  background-clip: padding-box;
+  border: solid 2px transparent;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    $gradient-color;
+  background-origin: border-box;
+  transition: all 0.6s ease;
+}
+
+.buttonPrimary {
+  @include button;
+  color: whitesmoke;
+
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px $gradient-color inset;
+
+  &:hover {
+    box-shadow: 2px 1000px 1px whitesmoke inset;
+    color: black;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+.buttonSecondary {
+  @include button;
+  color: black;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px whitesmoke inset;
+
+  &:hover {
+    box-shadow: none;
+    color: whitesmoke;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}

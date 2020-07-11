@@ -1,0 +1,71 @@
+### TO WORK WITH "APP.HTTP" FILE YOU HAVE TO INSTALL "REST CLIENT" EXTENSION TO YOUR "VS CODE"  ###
+
+###Get Shipment Data
+GET http://localhost:5000/shipments/
+
+###Post New Shipment Data
+POST http://localhost:5000/shipments/ 
+content-type: application/json
+
+ {
+      "name": "T-shirts(Summer2020) from Valsad to Ahmedabad",
+      "cargo": [
+        {
+          "type": "Fabric",
+          "description": "1000 Blue T-shirts",
+          "volume": "2"
+        },
+        {
+          "type": "Fabric",
+          "description": "2000 Green T-shirts",
+          "volume": "3"
+        }
+      ],
+      "mode": "sea",
+      "type": "FCL",
+      "destination": "Saarbrücker Str. 38, 10405 Berlin",
+      "origin": "Shanghai Port",
+      "services": [
+        {
+          "type": "customs"
+        }
+      ],
+      "total": "1000",
+      "status": "ACTIVE",
+      "userId": "U1000"
+    }
+
+###Delete Shipment Data by Id
+DELETE  http://localhost:5000/shipments/BFQYvFf
+
+###Update Shipment Data by Id
+PUT  http://localhost:5000/shipments/BFQYvFf
+content-type: application/json
+
+ {
+      "name": "T-shirts(Summer2020) from Surat to Ahmedabad",
+      "cargo": [
+        {
+          "type": "Fabric",
+          "description": "1000 Blue T-shirts",
+          "volume": "2"
+        },
+        {
+          "type": "Fabric",
+          "description": "2000 Green T-shirts",
+          "volume": "3"
+        }
+      ],
+      "mode": "sea",
+      "type": "FCL",
+      "destination": "Saarbrücker Str. 38, 10405 Berlin",
+      "origin": "Shanghai Port",
+      "services": [
+        {
+          "type": "customs"
+        }
+      ],
+      "total": "1000",
+      "status": "ACTIVE",
+      "userId": "U1000"
+    }

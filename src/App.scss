@@ -1,0 +1,16 @@
+@import './styles/styles';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: $font-primary;
+}
+
+main {
+  margin-top: 5rem;
+}

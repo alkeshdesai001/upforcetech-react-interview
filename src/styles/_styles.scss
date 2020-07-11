@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap'); // font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap'); //font-family: 'Gugi', cursive;
+
+$font-logo: 'Gugi', cursive;
+$font-primary: 'Roboto', sans-serif;
+$color-primary: #007bff;
+
+$font-color-dark: #fff;
+$gradient-linear-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+$gradient-color: linear-gradient(45deg, #4458dc 0%, #854fee 100%);
+$box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+
+.lightMode {
+  --bg-color: #fff;
+  --title-color: #212529;
+  --text-color: #777777;
+}
+
+.darkMode {
+  --bg-color: #12181b;
+  --title-color: #fff;
+  --text-color: #ddd;
+}
+
+@mixin displayFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
