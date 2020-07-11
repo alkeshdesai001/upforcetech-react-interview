@@ -8,11 +8,20 @@ const Footer = (props) => {
 
   return (
     <footer
-      className={['theme', darkMode ? 'darkMode' : 'lightMode'].join(' ')}
+      className={['theme', darkMode ? 'lightMode' : 'darkMode'].join(' ')}
     >
-      <div className='container'>
-        <h1>Footer</h1>
-      </div>
+      <p>
+        Created with <i className='fa fa-heart'></i> by Alkesh Desai - Visit my
+        Github account &nbsp;
+        <a
+          target='_blank'
+          rel='noopener noreferrer'
+          href='https://github.com/alkeshdesai001/'
+        >
+          here
+        </a>
+        .
+      </p>
     </footer>
   );
 };

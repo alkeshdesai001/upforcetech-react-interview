@@ -1,0 +1,23 @@
+footer {
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+
+  p {
+    margin: 10px 0;
+  }
+
+  i {
+    color: red;
+  }
+
+  a {
+    color: #3c97bf;
+    text-decoration: none;
+  }
+}

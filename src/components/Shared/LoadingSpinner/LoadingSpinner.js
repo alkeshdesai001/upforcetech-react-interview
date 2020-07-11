@@ -2,10 +2,10 @@ import React from 'react';
 
 import './LoadingSpinner.scss';
 
-const LoadingSpinner = (props) => {
+const LoadingSpinner = ({ asOverlay }) => {
   return (
-    <div className={`${props.asOverlay && 'loading-spinner__overlay'}`}>
-      <div className='lds-dual-ring'></div>
+    <div className={`${asOverlay && 'overlay'}`}>
+      <div className='ring'></div>
     </div>
   );
 };

@@ -27,7 +27,7 @@ const Navbar = (props) => {
       {openDrawer && <Backdrop onClick={() => setOpenDrawer(false)} />}
       <SideDrawer className={className} show={openDrawer}>
         <h1 className={[classes.drawerTitle, classes.title].join(' ')}>
-          <Link to='/'>ShipCorp</Link>
+          <Link to='/material'>ShipCorp</Link>
         </h1>
         <div className={classes.toggle}>
           <i
@@ -62,7 +62,7 @@ const Navbar = (props) => {
           </button>
 
           <h1 className={classes.title}>
-            <Link to='/'>ShipCorp</Link>
+            <Link to='/material'>ShipCorp</Link>
           </h1>
 
           <nav className={classes.navLinks}>

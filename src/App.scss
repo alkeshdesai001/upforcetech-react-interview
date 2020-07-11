@@ -11,8 +11,9 @@ body {
   font-family: $font-primary;
 }
 
-main {
-  padding-top: 5rem;
+.content {
+  padding: 8rem 0;
+  min-height: 100vh;
 }
 
 .theme {
@@ -23,7 +24,6 @@ main {
 .container {
   max-width: 90%;
   margin: 0 auto;
-  padding-top: 5rem;
 
   @media (min-width: 1200px) {
     max-width: 1200px;
@@ -44,4 +44,11 @@ ul {
 button {
   font: inherit;
   outline: none;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

@@ -69,3 +69,6 @@ content-type: application/json
       "status": "ACTIVE",
       "userId": "U1000"
     }
+
+###Get Shipment Data with Params
+GET http://localhost:5000/shipments/?_page=1&_limit=5
