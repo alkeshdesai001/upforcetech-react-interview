@@ -3,9 +3,9 @@ import axios from '../../components/Axios/Axios';
 
 export const setLoading = () => ({ type: SET_LOADING });
 
-const tableData = (payload) => ({ type: GET_SHIPMENT_DATA, payload });
+const shipmentData = (payload) => ({ type: GET_SHIPMENT_DATA, payload });
 
-export const getTableData = (params) => (dispatch) => {
-  const url = '/shipment';
-  axios.get(url).then((res) => dispatch(tableData(res.data)));
+export const getShipmentData = (params) => (dispatch) => {
+  const url = '/shipments';
+  axios.get(url).then((res) => dispatch(shipmentData(res.data)));
 };

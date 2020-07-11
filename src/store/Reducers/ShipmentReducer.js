@@ -16,7 +16,7 @@ export default (state = initialState, action) => {
     case GET_SHIPMENT_DATA: {
       return {
         ...state,
-        shipmentData: action.payload.hits,
+        shipmentData: action.payload,
         loading: false,
       };
     }

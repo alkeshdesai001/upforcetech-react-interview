@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState, useCallback } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import NavLinks from './NavLinks/NavLinks';
@@ -12,6 +12,11 @@ import classes from './Navbar.module.scss';
 
 const Navbar = (props) => {
   const { darkMode } = useSelector((state) => state.settings);
+  const dispatch = useDispatch();
+
+  const toggleDarkModeHandler = useCallback(() => dispatch(toggleDarkMode()), [
+    dispatch,
+  ]);
 
   const [openDrawer, setOpenDrawer] = useState(false);
 
@@ -29,7 +34,7 @@ const Navbar = (props) => {
             className='fas fa-sun'
             style={{ color: darkMode ? 'grey' : 'yellow' }}
           ></i>
-          <Toggle checked={darkMode} onChange={toggleDarkMode} />
+          <Toggle checked={darkMode} onChange={toggleDarkModeHandler} />
           <i
             className='fas fa-moon'
             style={{ color: darkMode ? 'slateblue' : 'grey' }}
@@ -43,7 +48,7 @@ const Navbar = (props) => {
   );
 
   return (
-    <div>
+    <div className={className}>
       {drawer}
       <header className={classes.navHeader}>
         <div className={classes.navContainer}>
@@ -57,16 +62,7 @@ const Navbar = (props) => {
           </button>
 
           <h1 className={classes.title}>
-            <Link
-              activeClass='active'
-              to='banner'
-              spy={true}
-              smooth={true}
-              offset={-80}
-              duration={500}
-            >
-              ShipCorp
-            </Link>
+            <Link to='/'>ShipCorp</Link>
           </h1>
 
           <nav className={classes.navLinks}>
@@ -77,7 +73,7 @@ const Navbar = (props) => {
                 className='fas fa-sun'
                 style={{ color: darkMode ? 'grey' : 'yellow' }}
               ></i>
-              <Toggle checked={darkMode} onChange={toggleDarkMode} />
+              <Toggle checked={darkMode} onChange={toggleDarkModeHandler} />
               <i
                 className='fas fa-moon'
                 style={{ color: darkMode ? 'slateblue' : 'grey' }}

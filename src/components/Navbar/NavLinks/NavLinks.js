@@ -7,10 +7,14 @@ const NavLinks = (props) => {
   return (
     <ul className='navLinks'>
       <li>
-        <NavLink to='/'>Material Table</NavLink>
+        <NavLink to='/' exact>
+          Material Table
+        </NavLink>
       </li>
       <li>
-        <NavLink to='/custom'>Custom Table</NavLink>
+        <NavLink to='/custom' exact>
+          Custom Table
+        </NavLink>
       </li>
     </ul>
   );

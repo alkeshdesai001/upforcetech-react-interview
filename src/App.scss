@@ -12,5 +12,36 @@ body {
 }
 
 main {
-  margin-top: 5rem;
+  padding-top: 5rem;
+}
+
+.theme {
+  background: var(--bg-color);
+  color: var(--title-color);
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding-top: 5rem;
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+
+a {
+  font: inherit;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+ul {
+  font: inherit;
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  outline: none;
 }
